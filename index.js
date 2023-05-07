@@ -38,8 +38,22 @@ const tweetsData = [
         profilePicture: `images/doughnut.jpeg`,
         likes: 10,
         retweets: 3,
-        tweetText: `Do you like desserts?`
-        }
+        tweetText: `Do you like desserts?`,
+        replies: [
+            {
+                handle: `@newlife`,
+                profiloPicture: `images/newlife.jpeg`,
+                tweetText: `Yes, but I can't eat it.`,
+            },
+            {
+                handle: `@greenheaven`,
+                profilePicture: `images/greenheaven`,
+                tweetText: `If the sugar ratio is low, I like it very much.`,
+            },
+        ],
+        isLiked: false,
+        isRetweeted: false,
+        },
      ]
     
 
