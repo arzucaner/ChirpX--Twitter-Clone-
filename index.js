@@ -19,11 +19,27 @@ const tweetsData = [
         tweetText: `Have you tried chatgpt?`,
         replies: [
 
-            {handle: `@computerhead`,
-        profilePicture: `images/computer.jpeg`,
-        tweetText: `Yes, I like it`,
+                  {
+                handle: `@computerhead`,
+                profilePicture: `images/computer.jpeg`,
+                tweetText: `Yes, I like it`,
+           },
+                  {
+                handle: `@birds`,
+                profilePicture: `images/birds.jpeg`,
+                tweetText: `I don't like it`,
+            },
+        ],
+        isLiked: false,
+        isRetweeted: false,
     },
-   
+        {
+        handle: `@Doughnut`,
+        profilePicture: `images/doughnut.jpeg`,
+        likes: 10,
+        retweets: 3,
+        tweetText: `Do you like desserts?`
+        }
      ]
-    }
-]
+    
+
