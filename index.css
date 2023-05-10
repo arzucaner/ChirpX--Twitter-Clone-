@@ -10,6 +10,11 @@ h1{
     font-size: 20px;
 }
 
+i{
+    font-size: 15px;
+    cursor: pointer;
+}
+
 .liked{
     color: purple;
 }
@@ -40,6 +45,7 @@ textarea{
     width: 100%;
     font-size: 20px;
     line-height: 30px;
+    resize: none;
 }
 
 button{
@@ -72,4 +78,39 @@ button{
     font-size: 13px;
     justify-content: space-between;
     width: 160;
+}
+
+.tweet-detail{
+    display: flex;
+    gap: 4px;
+}
+
+.tweet-reply{
+    border-top: 1px solid lightgray;
+    padding: 20px 0 0 0px;
+    margin: 10px 0 10px 40px;
+    width: 80%;
+}
+
+.handle{
+    font-size: 12px;
+    font-weight: 500;
+    color: #555;
+    margin-top: 0;
+}
+
+.tweet-text{
+    width: 207px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.profile-picture{
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    width: 48px;
+}
+
+.hidden{
+    display: none;
 }
