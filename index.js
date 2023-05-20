@@ -23,7 +23,7 @@ function handleLikeClick(tweetId){
     })[0]
 
     if (targetTweetObj.isLiked){
-        targetTweetObj.likes---        
+        targetTweetObj.likes--        
     }
     else{
         targetTweetObj.likes++
@@ -70,8 +70,22 @@ function getFeedHtml(){
         let repliesHtml =''
 
         if(tweet.replies.length > 0){
-            console.log(tweet.uuid)
+            tweet.replies.lengthforEach(function(reply){
+                repliesHtml+=`
+                console.log(tweet.uuid)
         }
+
+    <div class="tweet-reply">
+        <div class="tweet-inner">
+            <img src="${reply.profilePicture}" class="profile-picture">
+                <div>
+                    <p class="handle">${reply.handle}</p>
+                    <p class="tweet-text">${reply.handle}</p>
+                    </div>
+                </div>
+            </div>
+            `
+            })
         
         feedHtml += `
     <div class="tweet">
@@ -97,6 +111,8 @@ function getFeedHtml(){
 `
         
     })
+
+}
     return feedHtml
 }
 
