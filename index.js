@@ -46,8 +46,8 @@ function handleLikeClick(tweetId){
     targetTweetObj.isRetweeted = !targetTweetObj.isRetweeted       
     render()
 
-function handleReplyClick(replyId){
-    document.getElementById(`replies-${replyId}`).classList.toggle('hidden')
+function handleReplyClick(replyId){  
+     document.getElementById(`replies-${replyId}`).classList.toggle('hidden')
 }
 
 function getFeedHtml(){
@@ -96,9 +96,18 @@ function getFeedHtml(){
            <p class="tweet-text">${tweet.tweetText}</p>
            <div class="tweet-details">
                 <span class="tweet-detail">
+                <i class="${tweet.tweetText}</p>
+                <div class="tweet-details">
+                <span class="tweet-detail">
+                <i class="fa-regular fa-comment-dots"
+                data-repley="${tweet.uuid}"
+                ></i>                
                       ${tweet.replies.length}
                 </span>
                 <span class="tweet-detail">
+                <i class="fa-solid fa-heart ${likeIconClass}"
+                data-like="${tewwt.uuid}"
+                ></i>
                     ${tweet.likes}
                 </span>
                 <span class="tweet-detail">
