@@ -106,22 +106,27 @@ function getFeedHtml(){
                 </span>
                 <span class="tweet-detail">
                 <i class="fa-solid fa-heart ${likeIconClass}"
-                data-like="${tewwt.uuid}"
+                data-like="${tweet.uuid}"
                 ></i>
                     ${tweet.likes}
                 </span>
                 <span class="tweet-detail">
+                <i class="fa-solid fa-retweet ${retweetIconClass}"
+                data-retweet="${tweet.uuid}"
+                ></i>
                    ${tweet.retweets}
                 </span>
             </div>
         </div>
+    </div>
+    <div class="hidden" id="replies-${tweet.uuid}">
+    ${repliesHtml}
     </div>
 </div>
 `
         
     })
 
-}
     return feedHtml
 }
 
