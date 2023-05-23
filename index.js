@@ -50,6 +50,20 @@ function handleReplyClick(replyId){
      document.getElementById(`replies-${replyId}`).classList.toggle('hidden')
 }
 
+function handleTweetBtnClick(){
+    console.log({
+        handle: `@chirpx`,
+        profilePicture: `images/chirpxlogo.png`,
+        likes: 0,
+        retweets: 0,
+        tweetText: tweetInput.value,
+        replies: [],
+        isLiked: false,
+        isRetweeted: false,
+        uuid: uuidv4(),
+    },)
+}
+
 function getFeedHtml(){
     let feedHtml = ``
 
@@ -74,7 +88,7 @@ function getFeedHtml(){
                 repliesHtml+=`
                 console.log(tweet.uuid)
         }
-
+    
     <div class="tweet-reply">
         <div class="tweet-inner">
             <img src="${reply.profilePicture}" class="profile-picture">
