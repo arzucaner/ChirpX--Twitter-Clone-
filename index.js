@@ -1,4 +1,5 @@
 import {tweetsData} from './data/js'
+import {v4 as uuidv4 } from 'https://jspm.dev/uuid';
 const tweetInput = document.getElementById('tweet-input')
 const tweetBtn = document.getElementById('tweet-btn')
 
@@ -100,6 +101,7 @@ function getFeedHtml(){
             </div>
             `
             })
+        }
         
         feedHtml += `
     <div class="tweet">
