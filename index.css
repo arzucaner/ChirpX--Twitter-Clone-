@@ -1,25 +1,25 @@
 html, body {
     margin: 0;
     padding: 0;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-h1{ 
+h1 {
     color: #93afc1;
     margin-bottom: 10px;
     font-size: 20px;
 }
 
-i{
+i {
     font-size: 15px;
     cursor: pointer;
 }
 
-.fa-solid{
-    color: #999
+.fa-solid {
+    color: #999;
 }
 
-.liked{
+.liked {
     color: purple;
 }
 
@@ -27,24 +27,23 @@ i{
     color: lightcoral;
 }
 
-main, header{
-    width: 290px;
+main, header {
+    width: 400px;
     margin: 0 auto;
-}
-
-header{
-    padding-bottom: 25px;
+    padding: 20px;
 }
 
 .tweet-input-area {
     display: flex;
+    align-items: center;
     gap: 10px;
+    margin-bottom: 20px;
 }
 
-textarea{
+textarea {
     border: none;
     padding: 10px;
-    margin: 0 0 20px 0;
+    margin: 0;
     height: 60px;
     width: 100%;
     font-size: 20px;
@@ -52,7 +51,7 @@ textarea{
     resize: none;
 }
 
-button{
+button {
     background-color: #94c6e5;
     border: none;
     color: white;
@@ -64,57 +63,55 @@ button{
     font-weight: 600;
 }
 
-.tweet{
+.tweet {
     border-top: 1px solid lightgray;
-    padding: 20px 0 0 0;
-    width: 100%;
-    margin: 15px 0;
+    padding-top: 20px;
+    margin-bottom: 20px;
 }
 
-.tweet-inner{
+.tweet-inner {
     display: flex;
     align-items: flex-start;
     gap: 10px;
 }
 
-.tweet-details{
+.tweet-details {
     display: flex;
     font-size: 13px;
     justify-content: space-between;
-    width: 160;
+    width: 160px;
 }
 
-.tweet-detail{
+.tweet-detail {
     display: flex;
     gap: 4px;
 }
 
-.tweet-reply{
+.tweet-replies {
     border-top: 1px solid lightgray;
-    padding: 20px 0 0 0px;
-    margin: 10px 0 10px 40px;
-    width: 80%;
+    padding-top: 20px;
+    margin-left: 40px;
 }
 
-.handle{
+.handle {
     font-size: 12px;
     font-weight: 500;
     color: #555;
     margin-top: 0;
 }
 
-.tweet-text{
+.tweet-text {
     width: 207px;
     font-size: 14px;
     line-height: 20px;
 }
 
-.profile-picture{
+.profile-picture {
     border: 1px solid lightgray;
     border-radius: 50%;
     width: 48px;
 }
 
-.hidden{
+.hidden {
     display: none;
 }

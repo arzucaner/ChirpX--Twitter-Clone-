@@ -3,29 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChirpX</title>
+    <meta name="description" content="ChirpX is a social media platform for sharing thoughts and connecting with others.">
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300&display=swap" rel="stylesheet">
-    </head>
+</head>
 <body>
     <header>
         <h1>ChirpX</h1>
+        <div class="profile-info">
+            <img src="images/profile-picture.png" class="profile-picture">
+            <div class="user-info">
+                <p class="username">Arzu Caner</p>
+                <p class="bio">Developer</p>
+            </div>
+        </div>
     </header>
     <main>
-        <div class ="tweet-input-area">
+        <div class="tweet-input-area">
             <img src="images/chirpxlogo.png" class="profile-picture">
-            <textarea
-            placeholder="What's happening?"
-            id="tweet-input"
-            ></textarea>
+            <textarea placeholder="What's happening?" id="tweet-input"></textarea>
         </div>
         <button id="tweet-btn">Tweet</button>
-        <div class="feed" id="feed"></div>
+        <div class="feed" id="feed">            
+        </div>
     </main>
     <script src="index.js" type="module"></script>
+    <script src="data.js" type="module"></script>
+    <script>
+        const profilePicture = document.querySelector('.profile-info .profile-picture');
+        const username = document.querySelector('.profile-info .username');
+        const bio = document.querySelector('.profile-info .bio');
+
+        profilePicture.src = tweetsData[0].profilePicture;
+        username.textContent = tweetsData[0].handle;
+        bio.textContent = 'Developer'; 
+    </script>
 </body>
 </html>
