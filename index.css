@@ -1,117 +1,187 @@
-html, body {
+body {
+    font-family: 'Unbounded', sans-serif;
     margin: 0;
     padding: 0;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-h1 {
-    color: #93afc1;
-    margin-bottom: 10px;
-    font-size: 20px;
-}
-
-i {
-    font-size: 15px;
-    cursor: pointer;
-}
-
-.fa-solid {
-    color: #999;
-}
-
-.liked {
-    color: purple;
-}
-
-.retweeted {
-    color: lightcoral;
-}
-
-main, header {
-    width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.tweet-input-area {
+  }
+  
+  header {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-textarea {
-    border: none;
-    padding: 10px;
-    margin: 0;
-    height: 60px;
-    width: 100%;
-    font-size: 20px;
-    line-height: 30px;
-    resize: none;
-}
-
-button {
-    background-color: #94c6e5;
-    border: none;
-    color: white;
-    padding: 10px 19px;
-    border-radius: 20px;
-    width: 100%;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 600;
-}
-
-.tweet {
-    border-top: 1px solid lightgray;
-    padding-top: 20px;
-    margin-bottom: 20px;
-}
-
-.tweet-inner {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-}
-
-.tweet-details {
-    display: flex;
-    font-size: 13px;
     justify-content: space-between;
-    width: 160px;
-}
-
-.tweet-detail {
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+  
+  .profile-info {
     display: flex;
-    gap: 4px;
-}
-
-.tweet-replies {
-    border-top: 1px solid lightgray;
-    padding-top: 20px;
-    margin-left: 40px;
-}
-
-.handle {
-    font-size: 12px;
-    font-weight: 500;
-    color: #555;
-    margin-top: 0;
-}
-
-.tweet-text {
-    width: 207px;
-    font-size: 14px;
-    line-height: 20px;
-}
-
-.profile-picture {
-    border: 1px solid lightgray;
+    align-items: center;
+  }
+  
+  .profile-picture {
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    width: 48px;
-}
-
-.hidden {
-    display: none;
-}
+    margin-right: 10px;
+  }
+  
+  .username {
+    font-weight: bold;
+  }
+  
+  .bio {
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .tweet-input-area {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+  }
+  
+  #tweet-btn {
+    width: 120px;
+    height: 30px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .feed {
+    margin-top: 20px;
+  }
+  
+  .tweet {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .tweet-inner {
+    display: flex;
+    align-items: center;
+  }
+  
+  .tweet .profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .handle {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .tweet-text {
+    margin-bottom: 10px;
+  }
+  
+  .tweet-details {
+    display: flex;
+    align-items: center;
+  }
+  
+  .tweet-detail {
+    margin-right: 20px;
+  }
+  
+  .fa-comment-dots,
+  .fa-heart,
+  .fa-retweet {
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  
+  .liked {
+    color: red;
+  }
+  
+  .retweeted {
+    color: green;
+  }
+  
+  .tweet-replies {
+    margin-top: 10px;
+  }
+  
+  .tweet-reply {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .tweet-reply .profile-picture {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  
+  @media (max-width: 600px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .profile-info {
+      margin-top: 10px;
+    }
+  
+    .tweet-input-area {
+      flex-direction: column;
+    }
+  
+    textarea {
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    .search-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .search-bar input {
+      width: 300px;
+      height: 40px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  
+    .profile-edit-page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .profile-edit-page input {
+      width: 300px;
+    }  
+} 
+     
+      
