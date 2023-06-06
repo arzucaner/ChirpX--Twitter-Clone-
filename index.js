@@ -58,6 +58,35 @@ function handleReplyClick(replyId) {
     }
 }
 
+function render() {
+    const feedHtml = getFeedHtml();
+    feed.innerHTML = feedHtml;
+
+    const likeButtons = document.querySelectorAll('[data-like]');
+    likeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const tweetId = button.dataset.like;
+            handleLikeClick(tweetId);
+        });
+    });
+
+    const retweetButtons = document.querySelectorAll('[data-retweet]');
+    retweetButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const tweetId = button.dataset.retweet;
+            handleRetweetClick(tweetId);
+        });
+    });
+
+    const replyButtons = document.querySelectorAll('.reply-button');
+    replyButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const replyId = button.dataset.reply;
+            handleReplyClick(replyId);
+        });
+    });
+}
+
 function getFeedHtml() {
     let feedHtml = '';
     tweetsData.forEach(tweet => {
@@ -96,4 +125,18 @@ function getFeedHtml() {
                                 ${tweet.likes}
                             </span>
                             <span class="tweet-detail">
-                                <i class="fa-solid fa-retweet ${retweetIconClass}"
+                                <i class="fa-solid fa-retweet ${retweetIconClass}" data-retweet="${tweet.uuid}"></i>
+                                ${tweet.retweets}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                ${repliesHtml}
+                <button class="reply-button" data-reply="${tweet.uuid}">Reply</button>
+            </div>
+        `;
+    });
+    return feedHtml;
+}
+
+render();
