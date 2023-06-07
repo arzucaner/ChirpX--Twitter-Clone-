@@ -4,8 +4,9 @@ import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 const tweetInput = document.getElementById('tweet-input');
 const tweetBtn = document.getElementById('tweet-btn');
 const feed = document.getElementById('feed');
+const analyticsSection = document.getElementById('analytics');
 
-tweetBtn.addEventListener('click', function() {
+tweetBtn.addEventListener('click', function () {
     const tweetText = tweetInput.value;
     if (tweetText.trim() !== '') {
         const newTweet = {
@@ -64,7 +65,7 @@ function render() {
 
     const likeButtons = document.querySelectorAll('[data-like]');
     likeButtons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const tweetId = button.dataset.like;
             handleLikeClick(tweetId);
         });
@@ -72,7 +73,7 @@ function render() {
 
     const retweetButtons = document.querySelectorAll('[data-retweet]');
     retweetButtons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const tweetId = button.dataset.retweet;
             handleRetweetClick(tweetId);
         });
@@ -80,7 +81,7 @@ function render() {
 
     const replyButtons = document.querySelectorAll('.reply-button');
     replyButtons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const replyId = button.dataset.reply;
             handleReplyClick(replyId);
         });
@@ -140,3 +141,18 @@ function getFeedHtml() {
 }
 
 render();
+
+const totalTweets = tweetsData.length;
+const totalRetweets = tweetsData.reduce((total, tweet) => total + tweet.retweets, 0);
+const totalLikes = tweetsData.reduce((total, tweet) => total + tweet.likes, 0);
+const engagementRate = ((totalLikes / totalTweets) * 100).toFixed(2);
+
+const analyticsHtml = `
+    <h2>Analytics</h2>
+    <p>Total Tweets: <span>${totalTweets}</span></p>
+    <p>Total Retweets: <span>${totalRetweets}</span></p>
+    <p>Total Likes: <span>${totalLikes}</span></p>
+    <p>Engagement Rate: <span>${engagementRate}%</span></p>
+`;
+
+analyticsSection.innerHTML = analyticsHtml; 
