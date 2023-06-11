@@ -1,186 +1,185 @@
 body {
-    font-family: 'Unbounded', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
+  font-family: 'Unbounded', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+}
+
+.profile-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.bio {
+  font-size: 14px;
+  color: #ccc;
+}
+
+main {
+  padding: 20px;
+}
+
+.tweet-input-area {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+}
+
+#tweet-btn {
+  width: 120px;
+  height: 30px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.feed {
+  margin-top: 20px;
+}
+
+.tweet {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.tweet-inner {
+  display: flex;
+  align-items: center;
+}
+
+.tweet .profile-picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.handle {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.tweet-text {
+  margin-bottom: 10px;
+}
+
+.tweet-details {
+  display: flex;
+  align-items: center;
+}
+
+.tweet-detail {
+  margin-right: 20px;
+}
+
+.fa-comment-dots,
+.fa-heart,
+.fa-retweet {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.liked {
+  color: red;
+}
+
+.retweeted {
+  color: green;
+}
+
+.tweet-replies {
+  margin-top: 10px;
+}
+
+.tweet-reply {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.tweet-reply .profile-picture {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+@media (max-width: 600px) {
   header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  h1 {
-    font-size: 24px;
-  }
-  
+
   .profile-info {
-    display: flex;
-    align-items: center;
-  }
-  
-  .profile-picture {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  
-  .username {
-    font-weight: bold;
-  }
-  
-  .bio {
-    font-size: 14px;
-    color: #ccc;
-  }
-  
-  main {
-    padding: 20px;
-  }
-  
-  .tweet-input-area {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    resize: none;
-  }
-  
-  #tweet-btn {
-    width: 120px;
-    height: 30px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  .feed {
-    margin-top: 20px;
-  }
-  
-  .tweet {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .tweet-inner {
-    display: flex;
-    align-items: center;
-  }
-  
-  .tweet .profile-picture {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  
-  .handle {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .tweet-text {
-    margin-bottom: 10px;
-  }
-  
-  .tweet-details {
-    display: flex;
-    align-items: center;
-  }
-  
-  .tweet-detail {
-    margin-right: 20px;
-  }
-  
-  .fa-comment-dots,
-  .fa-heart,
-  .fa-retweet {
-    margin-right: 5px;
-    cursor: pointer;
-  }
-  
-  .liked {
-    color: red;
-  }
-  
-  .retweeted {
-    color: green;
-  }
-  
-  .tweet-replies {
     margin-top: 10px;
   }
-  
-  .tweet-reply {
+
+  .tweet-input-area {
+    flex-direction: column;
+  }
+
+  textarea {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .search-bar {
     display: flex;
     align-items: center;
-    margin-bottom: 5px;
+    justify-content: center;
   }
-  
-  .tweet-reply .profile-picture {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    margin-right: 5px;
-  }
-  
-  @media (max-width: 600px) {
-    header {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .profile-info {
-      margin-top: 10px;
-    }
-  
-    .tweet-input-area {
-      flex-direction: column;
-    }
-  
-    textarea {
-      width: 100%;
-      margin-top: 10px;
-    }
-  
-    .search-bar {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  
-    .search-bar input {
-      width: 300px;
-      height: 40px;
-      padding: 5px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-  
-    .profile-edit-page {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .profile-edit-page input {
-      width: 300px;
-    }
 
-   
+  .search-bar input {
+    width: 300px;
+    height: 40px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .profile-edit-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-edit-page input {
+    width: 
+  }
+}
