@@ -147,12 +147,11 @@ const totalRetweets = tweetsData.reduce((total, tweet) => total + tweet.retweets
 const totalLikes = tweetsData.reduce((total, tweet) => total + tweet.likes, 0);
 const engagementRate = ((totalLikes / totalTweets) * 100).toFixed(2);
 
-const analyticsHtml = `
-    <h2>Analytics</h2>
-    <p>Total Tweets: <span>${totalTweets}</span></p>
-    <p>Total Retweets: <span>${totalRetweets}</span></p>
-    <p>Total Likes: <span>${totalLikes}</span></p>
-    <p>Engagement Rate: <span>${engagementRate}%</span></p>
-`;
+const analyticsHeading = document.getElementById('analytics-heading');
+
+analyticsHeading.addEventListener('click', function () {
+  const analyticsSection = document.getElementById('analytics');
+  analyticsSection.classList.toggle('expand');
+});
 
 analyticsSection.innerHTML = analyticsHtml; 

@@ -21,12 +21,12 @@ const tweetsData = [
         replies: [
             {
                 handle: `@computerhead`,
-                profilePicture: `images/computer.jpeg`,
+                profilePicture: `images/computer.jpg`,
                 tweetText: `Yes, I like it`,
             },
             {
                 handle: `@birds`,
-                profilePicture: `images/birds.jpeg`,
+                profilePicture: `images/birds.jpg`,
                 tweetText: `I don't like it`,
             },
         ],

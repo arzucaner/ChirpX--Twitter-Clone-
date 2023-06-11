@@ -170,3 +170,73 @@ textarea {
   height: 20px;
   border-radius: 50%;
 }
+
+.analytics {
+  margin-top: 20px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+.analytics #analytics-heading {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.analytics #analytics-details {
+  display: none;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.analytics #analytics-details p {
+  margin-bottom: 5px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.analytics #analytics-details span {
+  font-weight: bold;
+}
+
+.analytics #engagement-rate {
+  color: #fff;
+}
+
+.analytics.expand #analytics-details {
+  display: block;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.analytics .arrow {
+  display: inline-block;
+  margin-left: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.analytics.expand .arrow {
+  transform: rotate(180deg);
+}
