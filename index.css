@@ -65,6 +65,11 @@ textarea {
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#tweet-btn:hover {
+  background-color: #0056b3;
 }
 
 .feed {
@@ -76,6 +81,11 @@ textarea {
   border-radius: 5px;
   padding: 10px;
   margin-bottom: 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+.tweet:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .tweet-inner {
@@ -88,6 +98,11 @@ textarea {
   height: 50px;
   border-radius: 50%;
   margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.tweet .profile-picture:hover {
+  transform: scale(1.1);
 }
 
 .handle {
@@ -113,14 +128,31 @@ textarea {
 .fa-retweet {
   margin-right: 5px;
   cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.fa-comment-dots:hover,
+.fa-heart:hover,
+.fa-retweet:hover {
+  color: blue;
 }
 
 .liked {
   color: red;
+  transition: color 0.3s ease;
+}
+
+.liked:hover {
+  color: darkred;
 }
 
 .retweeted {
   color: green;
+  transition: color 0.3s ease;
+}
+
+.retweeted:hover {
+  color: darkgreen;
 }
 
 .tweet-replies {
@@ -137,49 +169,4 @@ textarea {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  margin-right: 5px;
-}
-
-@media (max-width: 600px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .profile-info {
-    margin-top: 10px;
-  }
-
-  .tweet-input-area {
-    flex-direction: column;
-  }
-
-  textarea {
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  .search-bar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .search-bar input {
-    width: 300px;
-    height: 40px;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-
-  .profile-edit-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .profile-edit-page input {
-    width: 
-  }
 }
