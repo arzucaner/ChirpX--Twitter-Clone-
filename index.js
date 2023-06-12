@@ -150,8 +150,8 @@ const engagementRate = ((totalLikes / totalTweets) * 100).toFixed(2);
 const analyticsHeading = document.getElementById('analytics-heading');
 
 analyticsHeading.addEventListener('click', function () {
-  const analyticsSection = document.getElementById('analytics');
-  analyticsSection.classList.toggle('expand');
+    const analyticsSection = document.getElementById('analytics');
+    analyticsSection.classList.toggle('expand');
 });
 
 analyticsSection.innerHTML = analyticsHtml; 

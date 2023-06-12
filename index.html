@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChirpX</title>
-    <meta name="description" content="ChirpX is a social media platform for sharing thoughts and connecting with others.">
+    <meta name="description"
+        content="ChirpX is a social media platform for sharing thoughts and connecting with others.">
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <h1>ChirpX</h1>
@@ -25,6 +28,17 @@
                 <p class="bio">Developer</p>
             </div>
         </div>
+        <div class="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">Notifications</a></li>
+                <li><a href="#">Messages</a></li>
+                <li><a href="#">Lists</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">More</a></li>
+            </ul>
+        </div>
     </header>
     <main>
         <div class="profile-edit-page">
@@ -38,21 +52,22 @@
             <textarea placeholder="What's happening?" id="tweet-input"></textarea>
         </div>
         <button id="tweet-btn">Tweet</button>
-        <div class="feed" id="feed">            
+        <div class="feed" id="feed">
         </div>
         <div class="analytics" id="analytics">
             <h2 id="analytics-heading">Analytics <span class="arrow">&#9660;</span></h2>
-              <div class="analytics-details" id="analytics-details">
-              <p>Total Tweets: <span id="total-tweets">0</span></p>
-              <p>Total Retweets: <span id="total-retweets">0</span></p>
-              <p>Total Likes: <span id="total-likes">0</span></p>
-              <p>Engagement Rate: <span id="engagement-rate">0%</span></p>
+            <div class="analytics-details" id="analytics-details">
+                <p>Total Tweets: <span id="total-tweets">0</span></p>
+                <p>Total Retweets: <span id="total-retweets">0</span></p>
+                <p>Total Likes: <span id="total-likes">0</span></p>
+                <p>Engagement Rate: <span id="engagement-rate">0%</span></p>
             </div>
-          </div>
         </div>
-        </main>
-        
+        </div>
+    </main>
+
     <script src="index.js" type="module"></script>
     <script src="data.js" type="module"></script>
 </body>
+
 </html>
